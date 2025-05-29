@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">proyecto</string>
+    <string name="decifrar">Decifra</string>
+    <string name="protege"> protege</string>
+    <string name="escapa">y escapa</string>
+    <string name="texto1">¿Tienes lo necesario para vencer al sistema?</string>
+    <string name="Acceder">Acceder</string>
+    <string name="registrarse">REGISTRARSE</string>
+    <string name="iniciarsesion">INICIAR SESIÓN</string>
+    <string name="texto2">Inicie sesión para continuar con nuetra aplicación</string>
+    <string name="olvcontra">¿Olvidaste la contraseña?</string>
+    <string name="nocuenta">¿No tienes cuenta?</string>
+    <string name="registrate">Registrate</string>
+    <string name="Atras">Atras</string>
+    <string name="texto3">Por favor complete los datos y cree una cuenta</string>
+    <string name="aviso">La contraseña debe tener 8 caracteres</string>
+    <string name="yacuenta">¿Ya tienes cuenta?</string>
+    <string name="iniciaS">inicia sesión</string>
+    <string name="alerta">ALERTA</string>
+    <string name="texto4">Tu identidad ha sido comprometida. Un grupo de hackers ha tomado control de tus datos.</string>
+    <string name="texto5">Recuepera el control superando desasfios digitales.</string>
+    <string name="comenzar">Comenzar misión</string>
+
+
+</resources>

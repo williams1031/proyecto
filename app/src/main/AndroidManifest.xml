@@ -18,9 +18,9 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
         <activity 
             android:name=".homeactivity" />
-        <activity
         <activity
             android:name=".loginactivity"
             android:exported="false" />

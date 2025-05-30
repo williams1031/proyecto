@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "448445845113",
+    "project_id": "hacker-escape",
+    "storage_bucket": "hacker-escape.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:448445845113:android:77f1cf7580f0d82f5b4ea8",
+        "android_client_info": {
+          "package_name": "com.example.proyecto"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADgSRdr3fwgmO642QAnCYLNIzCh7DxXHo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

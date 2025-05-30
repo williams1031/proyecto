@@ -9,7 +9,7 @@
     tools:context=".registrateactivity">
 
     <TextView
-        android:id="@+id/registerPromptText4"
+        android:id="@+id/text_iniciar_sesion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/iniciaS"
@@ -20,7 +20,7 @@
         app:layout_constraintHorizontal_bias="0.826"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.849" />
+        app:layout_constraintVertical_bias="0.887" />
 
     <TextView
         android:id="@+id/registerPromptText3"
@@ -31,10 +31,10 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.269"
+        app:layout_constraintHorizontal_bias="0.262"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.849" />
+        app:layout_constraintVertical_bias="0.887" />
 
     <TextView
         android:id="@+id/registerPromptText2"
@@ -45,13 +45,13 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.235"
+        app:layout_constraintHorizontal_bias="0.455"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.761" />
+        app:layout_constraintVertical_bias="0.755" />
 
     <EditText
-        android:id="@+id/editTextTextPassword2"
+        android:id="@+id/InputConfirmPassword"
         android:layout_width="355dp"
         android:layout_height="59dp"
         android:background="@drawable/rounded_box_background"
@@ -68,7 +68,7 @@
         app:layout_constraintVertical_bias="0.687" />
 
     <EditText
-        android:id="@+id/editTextTextPassword3"
+        android:id="@+id/InputPassword"
         android:layout_width="355dp"
         android:layout_height="59dp"
         android:background="@drawable/rounded_box_background"
@@ -85,14 +85,14 @@
         app:layout_constraintVertical_bias="0.574" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/InputEmail"
         android:layout_width="355dp"
         android:layout_height="59dp"
         android:background="@drawable/rounded_box_background"
         android:drawableStart="@drawable/icono_correo"
         android:ems="10"
         android:inputType="textEmailAddress"
-        android:text="Usuario"
+        android:text="Email"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.543"
@@ -157,4 +157,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.166" />
+
+    <Button
+        android:id="@+id/ButtonRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registrame"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/InputConfirmPassword"
+        app:layout_constraintVertical_bias="0.345" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

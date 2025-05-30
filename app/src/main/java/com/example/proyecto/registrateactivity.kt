@@ -1,16 +1,72 @@
 package com.example.proyecto
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.firebase.auth.FirebaseAuth
 
 class registrateactivity : AppCompatActivity() {
+
+    private lateinit var auth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_registrate)
+
+        auth = FirebaseAuth.getInstance() // Inicializa FirebaseAuth
+
+        val inputEmail = findViewById<EditText>(R.id.InputEmail)
+        val inputPassword = findViewById<EditText>(R.id.InputPassword)
+        val inputConfirmPassword = findViewById<EditText>(R.id.InputConfirmPassword)
+        val buttonSubmit = findViewById<Button>(R.id.ButtonRegister)
+        val linkGoLogin = findViewById<TextView>(R.id.text_iniciar_sesion)
+
+        buttonSubmit.setOnClickListener {
+            val email = inputEmail.text.toString().trim()
+            val password = inputPassword.text.toString().trim()
+            val confirmPassword = inputConfirmPassword.text.toString().trim()
+
+            // Validaciones
+            if (email.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
+                Toast.makeText(this, "Completa todos los campos", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            if (password != confirmPassword) {
+                Toast.makeText(this, "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            // Crear cuenta con Firebase
+            auth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        Toast.makeText(this, "Registro exitoso", Toast.LENGTH_SHORT).show()
+                        // Opcional: ir al login o a la pantalla principal
+                        val intent = Intent(this, alertaactivity::class.java)
+                        startActivity(intent)
+                        finish()
+                    } else {
+                        val error = task.exception?.message ?: "Error desconocido"
+                        Toast.makeText(this, "Error: $error", Toast.LENGTH_LONG).show()
+                    }
+                }
+        }
+
+        // Ir al login
+        linkGoLogin.setOnClickListener {
+            val intent = Intent(this, loginactivity::class.java)
+            startActivity(intent)
+        }
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)

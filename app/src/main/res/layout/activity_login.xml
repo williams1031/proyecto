@@ -3,8 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:id="@+id/main"
     android:layout_height="match_parent"
-    android:background="#000000">
+    android:background="#000000"
+    tools:context=".loginactivity">
 
     <!-- Botón Atrás -->
 
@@ -126,7 +128,7 @@
         android:drawableStart="@drawable/icono_correo"
         android:ems="10"
         android:inputType="textEmailAddress"
-        android:text="Usuario"
+        android:text="Correo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.543"

@@ -30,7 +30,7 @@
         app:srcCompat="@drawable/logo" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/AccederButton"
         android:layout_width="259dp"
         android:layout_height="88dp"
         android:backgroundTint="@color/verde"

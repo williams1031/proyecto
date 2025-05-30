@@ -21,7 +21,7 @@
         app:srcCompat="@drawable/logo" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/AccederButton"
         android:layout_width="259dp"
         android:layout_height="88dp"
         android:backgroundTint="@color/verde"
@@ -35,7 +35,7 @@
         app:layout_constraintVertical_bias="0.749" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/RegisterButton"
         android:layout_width="291dp"
         android:layout_height="75dp"
         android:background="@drawable/button_border"

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">proyecto</string>
+    <string name="app_name">HackerScape</string>
     <string name="decifrar">Decifra</string>
     <string name="protege"> protege</string>
     <string name="escapa">y escapa</string>
@@ -20,6 +20,24 @@
     <string name="texto4">Tu identidad ha sido comprometida. Un grupo de hackers ha tomado control de tus datos.</string>
     <string name="texto5">Recuepera el control superando desasfios digitales.</string>
     <string name="comenzar">Comenzar misión</string>
+    <string name="cronometro">3:00</string>
+    <string name="nivel1">NIVEL 1</string>
+    <string name="contraseña_segura">CONTRASEÑA SEGURA</string>
+    <string name="txt_contraseña">Crear una contraseña segura para pasar al siguiente nivel</string>
+    <string name="contraseña_nivel">Contraseña...</string>
+    <string name="validando_seguridad">Validando seguridad...</string>
+    <string name="mayuscula">Mayúscula</string>
+    <string name="minuscula">Minúscula</string>
+    <string name="numero">Número</string>
+    <string name="simbolo">Símbolo</string>
+    <string name="minimo_caracteres">Mínimo 8 caracteres</string>
+    <string name="nivel2">NIVEL 2</string>
+    <string name="detectar">🔎 DETECTAR LAS SEÑALES DE PHISHING</string>
+    <string name="txt_objetivo">Toca las partes sospechosas del siguiente correo electrónico</string>
+    <string name="felicitar">Felicidades agente cibernético</string>
+    <string name="txt_superado">Has superado este reto y has demostrado tus habilidades para identificar amenazas digitales</string>
+    <string name="btn_reintentar">Reintentar reto</string>
+
 
 
 </resources>

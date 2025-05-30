@@ -9,17 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Proyecto">
+         <!-- Pantalla MainActivity como launcher -->
         <activity
-            android:name=".alertaactivity"
-            android:exported="false" />
-        <activity
-            android:name=".registrateactivity"
-            android:exported="false" />
-        <activity
-            android:name=".loginactivity"
-            android:exported="false" /> <!-- Pantalla splash como launcher -->
-        <activity
-            android:name=".SplashActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,8 +19,25 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity> <!-- Actividad principal que se muestra luego del splash -->
-        <activity android:name=".MainActivity" /> <!-- Otra actividad que tienes -->
         <activity android:name=".homeactivity" />
+        <activity
+            android:name=".loginactivity"
+            android:exported="false" />
+        <activity
+            android:name=".registrateactivity"
+            android:exported="false" />
+        <activity
+            android:name=".alertaactivity"
+            android:exported="false" />
+        <activity
+            android:name=".actity_nivel1"
+            android:exported="false" />
+        <activity
+            android:name=".activity_nivel2"
+            android:exported="false" />
+        <activity
+            android:name=".activity_final"
+            android:exported="false" />
 
         <meta-data
             android:name="preloaded_fonts"

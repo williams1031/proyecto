@@ -12,6 +12,7 @@
     <string name="olvcontra">¿Olvidaste la contraseña?</string>
     <string name="nocuenta">¿No tienes cuenta?</string>
     <string name="registrate">Registrate</string>
+    <string name="btn_registrate">Registrarse</string>
     <string name="Atras">Atras</string>
     <string name="texto3">Por favor complete los datos y cree una cuenta</string>
     <string name="aviso">La contraseña debe tener 8 caracteres</string>
@@ -38,6 +39,9 @@
     <string name="felicitar">Felicidades agente cibernético</string>
     <string name="txt_superado">Has superado este reto y has demostrado tus habilidades para identificar amenazas digitales</string>
     <string name="btn_reintentar">Reintentar reto</string>
+    <string name="ejemplo_correo">Ejemplo@gmail.com</string>
+    <string name="ejemplo_contraseña">********</string>
+    <string name="ejemplo_contraseña2">contraseña</string>
 
 
 

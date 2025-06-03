@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/negro"
+    android:background="@color/black"
     tools:context=".homeactivity">
 
     <com.example.proyecto.MatrixRainView
@@ -30,35 +30,62 @@
         app:srcCompat="@drawable/logo" />
 
     <Button
-        android:id="@+id/AccederButton"
-        android:layout_width="259dp"
-        android:layout_height="88dp"
-        android:backgroundTint="@color/verde"
+        android:id="@+id/loginButton"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="64dp"
+        android:backgroundTint="#00FF00"
+        android:fontFamily="@font/roboto"
+        android:padding="10dp"
         android:text="@string/Acceder"
-        android:textColor="@color/negro"
-        android:textSize="34sp"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:cornerRadius="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.55"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.749" />
+        app:layout_constraintVertical_bias="0.74" />
 
-    <TextView
-        android:id="@+id/RegisterButton"
-        android:layout_width="280dp"
+    <LinearLayout
+        android:id="@+id/btnGoogle"
+        android:layout_width="260dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
         android:background="@drawable/button_repetir_reto"
-        android:fontFamily="@font/roboto_mono_medium"
-        android:gravity="center"
-        android:padding="20dp"
-        android:text="@string/registrate"
-        android:textColor="@color/verde"
-        android:textSize="34sp"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/matrixRainView"
-        app:layout_constraintVertical_bias="0.899" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.846">
+
+        <TextView
+            android:id="@+id/subtitleText2"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/roboto"
+            android:text="@string/btn_registrate"
+            android:textAlignment="center"
+            android:textColor="@color/verde"
+            android:textSize="30sp"
+            android:paddingStart="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.315" />
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

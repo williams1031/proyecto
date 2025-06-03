@@ -11,20 +11,31 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.firebase.auth.FirebaseAuth
+import android.widget.Toast
 
 class loginactivity : AppCompatActivity() {
 
     private var isPasswordVisible = false
+    private lateinit var auth: FirebaseAuth
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_login)
-
+        // Se inicia el proceso de "auth" de Firebase
+        auth = FirebaseAuth.getInstance()
+        // Variables para el manejo de los inputs
+        val InputEmail = findViewById<EditText>(R.id.editTextText)
         val inputPassword = findViewById<EditText>(R.id.editTextText2)
         val buttonTogglePassword = findViewById<ImageButton>(R.id.icon3)
+
+        // Button que redirecciona al usuario a la pantalla de Home
         val linkGoHome = findViewById<Button>(R.id.btn_atras)
+
+        // Button Submit de los datos
+        val LinkGoAcceder = findViewById<Button>(R.id.loginButton)
 
         // Link que redirije al usuario a la pantalla de RegisterActivity
         var LinkGoRegister = findViewById<TextView>(R.id.registerText)
@@ -32,11 +43,33 @@ class loginactivity : AppCompatActivity() {
             val intent = Intent(this, registrateactivity::class.java)
             startActivity(intent)
         }
-       val LinkGoAcceder = findViewById<Button>(R.id.loginButton)  // ACCEDE SIN VALIDAR PARA PRUEBAS
+
         LinkGoAcceder.setOnClickListener {
-            val intent = Intent(this, alertaactivity::class.java)
-            startActivity(intent)
+            val email = InputEmail.text.toString().trim()
+            val password = inputPassword.text.toString().trim()
+
+            // Valida si hay campos vacios
+            if (email.isEmpty() || password.isEmpty()){
+                Toast.makeText(this, "Completa todos los campos", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+            //Metodo de firebase para hacer el SignIn
+            auth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        Toast.makeText(this, "Se ha iniciado tu sesion con exito", Toast.LENGTH_SHORT).show()
+                        val intent = Intent(this, alertaactivity::class.java)
+                        startActivity(intent)
+                        finish()
+                    } else {
+                        val error = task.exception?.message ?: "Error desconocido"
+                        Toast.makeText(this, "Error: $error", Toast.LENGTH_LONG).show()
+                    }
+                }
+
         }
+
+
 
         // Ir al home
         linkGoHome.setOnClickListener {

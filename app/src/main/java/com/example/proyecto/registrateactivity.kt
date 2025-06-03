@@ -30,6 +30,7 @@ class registrateactivity : AppCompatActivity() {
         val inputConfirmPassword = findViewById<EditText>(R.id.InputConfirmPassword)
         val buttonSubmit = findViewById<Button>(R.id.ButtonRegister)
         val linkGoLogin = findViewById<TextView>(R.id.text_iniciar_sesion)
+        val linkGoHome = findViewById<TextView>(R.id.btn_atras)
         val buttonTogglePassword = findViewById<ImageButton>(R.id.icon5)
         val buttonToggleConfirmPassword = findViewById<ImageButton>(R.id.icon7)
 
@@ -72,6 +73,14 @@ class registrateactivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        // Ir al home
+        linkGoHome.setOnClickListener {
+            val intent = Intent(this, homeactivity::class.java)
+            startActivity(intent)
+        }
+
+
+
         // Toggle para mostrar/ocultar contraseña
         buttonTogglePassword.setOnClickListener {
             if (isPasswordVisible) {
@@ -94,17 +103,17 @@ class registrateactivity : AppCompatActivity() {
         buttonToggleConfirmPassword.setOnClickListener {
             if (isPasswordVisible) {
                 // Ocultar contraseña
-                inputPassword.inputType = android.text.InputType.TYPE_CLASS_TEXT or
+                inputConfirmPassword.inputType = android.text.InputType.TYPE_CLASS_TEXT or
                         android.text.InputType.TYPE_TEXT_VARIATION_PASSWORD
                 buttonToggleConfirmPassword.setImageResource(R.drawable.icono_no_ver_contrase_a) // Cambia al icono de ocultar
             } else {
                 // Mostrar contraseña
-                inputPassword.inputType = android.text.InputType.TYPE_CLASS_TEXT or
+                inputConfirmPassword.inputType = android.text.InputType.TYPE_CLASS_TEXT or
                         android.text.InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
                 buttonToggleConfirmPassword.setImageResource(R.drawable.icono_ver_contrase_a) // Cambia al icono de mostrar
             }
             // Mantener el cursor al final
-            inputPassword.setSelection(inputPassword.text.length)
+            inputConfirmPassword.setSelection(inputConfirmPassword.text.length)
             isPasswordVisible = !isPasswordVisible
         }
 

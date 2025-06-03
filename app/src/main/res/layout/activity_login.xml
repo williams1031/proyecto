@@ -111,7 +111,7 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.325"
+        app:layout_constraintHorizontal_bias="0.3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.813" />
@@ -122,19 +122,19 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/aoboshi_one"
         android:text="@string/registrate"
-        android:textColor="#00FF00"
+        android:textColor="@color/verde"
         android:textSize="16sp"
         android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.76"
+        app:layout_constraintHorizontal_bias="0.78"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.825" />
 
     <LinearLayout
         android:id="@+id/iconoCorreo"
-        android:layout_width="355dp"
+        android:layout_width="320dp"
         android:layout_height="59dp"
         android:background="@drawable/icono_input_background"
         android:gravity="center_vertical"
@@ -169,7 +169,7 @@
 
     <LinearLayout
         android:id="@+id/iconoContraseña"
-        android:layout_width="355dp"
+        android:layout_width="320dp"
         android:layout_height="59dp"
         android:background="@drawable/icono_input_background"
         android:gravity="center_vertical"
@@ -191,7 +191,7 @@
 
         <EditText
             android:id="@+id/editTextText2"
-            android:layout_width="252dp"
+            android:layout_width="230dp"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
             android:paddingStart="3dp"

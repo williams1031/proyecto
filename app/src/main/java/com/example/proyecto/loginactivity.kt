@@ -24,6 +24,7 @@ class loginactivity : AppCompatActivity() {
 
         val inputPassword = findViewById<EditText>(R.id.editTextText2)
         val buttonTogglePassword = findViewById<ImageButton>(R.id.icon3)
+        val linkGoHome = findViewById<ImageButton>(R.id.btn_atras)
 
         // Link que redirije al usuario a la pantalla de RegisterActivity
         var LinkGoRegister = findViewById<TextView>(R.id.registerText)
@@ -34,6 +35,12 @@ class loginactivity : AppCompatActivity() {
        val LinkGoAcceder = findViewById<Button>(R.id.loginButton)  // ACCEDE SIN VALIDAR PARA PRUEBAS
         LinkGoAcceder.setOnClickListener {
             val intent = Intent(this, alertaactivity::class.java)
+            startActivity(intent)
+        }
+
+        // Ir al home
+        linkGoHome.setOnClickListener {
+            val intent = Intent(this, homeactivity::class.java)
             startActivity(intent)
         }
 

@@ -35,11 +35,11 @@
         android:fontFamily="@font/aoboshi_one"
         android:text="@string/iniciaS"
         android:textColor="@color/verde"
-        android:textSize="20sp"
+        android:textSize="16sp"
         android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.79"
+        app:layout_constraintHorizontal_bias="0.89"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.934" />
@@ -50,11 +50,11 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/arapey"
         android:text="@string/yacuenta"
-        android:textColor="#FFFFFF"
-        android:textSize="22sp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.20"
+        app:layout_constraintHorizontal_bias="0.3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.919" />
@@ -129,7 +129,7 @@
 
     <LinearLayout
         android:id="@+id/iconoCorreo"
-        android:layout_width="355dp"
+        android:layout_width="320dp"
         android:layout_height="59dp"
         android:background="@drawable/icono_input_background"
         android:gravity="center_vertical"
@@ -162,50 +162,8 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/iconoContraseña"
-        android:layout_width="355dp"
-        android:layout_height="59dp"
-        android:background="@drawable/icono_input_background"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:padding="6dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.58">
-
-        <ImageView
-            android:id="@+id/icon2"
-            android:layout_width="wrap_content"
-            android:layout_height="25dp"
-            android:contentDescription="@null"
-            android:src="@drawable/icono_contrase_a"/>
-
-        <EditText
-            android:id="@+id/editTextText2"
-            android:layout_width="252dp"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:paddingStart="3dp"
-            android:ems="15"
-            android:inputType="textPassword"
-            android:textColor="@color/black"
-            android:hint="@string/ejemplo_contraseña"
-            android:textColorHint="@color/grey"/>
-
-        <ImageView
-            android:id="@+id/icon3"
-            android:layout_width="wrap_content"
-            android:layout_height="25dp"
-            android:contentDescription="@null"
-            android:src="@drawable/icono_no_ver_contrase_a"/>
-    </LinearLayout>
-
-    <LinearLayout
         android:id="@+id/iconoContraseña2"
-        android:layout_width="355dp"
+        android:layout_width="320dp"
         android:layout_height="59dp"
         android:background="@drawable/icono_input_background"
         android:gravity="center_vertical"
@@ -213,45 +171,45 @@
         android:padding="6dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.58">
+        app:layout_constraintVertical_bias="0.572">
 
         <ImageView
             android:id="@+id/icon4"
             android:layout_width="wrap_content"
             android:layout_height="25dp"
             android:contentDescription="@null"
-            android:src="@drawable/icono_contrase_a"/>
+            android:src="@drawable/icono_contrase_a" />
 
         <EditText
             android:id="@+id/InputPassword"
-            android:layout_width="252dp"
+            android:layout_width="230dp"
             android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:paddingStart="3dp"
-            android:ems="15"
-            android:inputType="textPassword"
-            android:textColor="@color/black"
-            android:hint="@string/ejemplo_contraseña"
             android:autofillHints="Nuevacontraseña"
-            android:textColorHint="@color/grey"/>
+            android:background="@android:color/transparent"
+            android:ems="15"
+            android:hint="@string/ejemplo_contraseña"
+            android:inputType="textPassword"
+            android:paddingStart="3dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey" />
 
         <ImageButton
             android:id="@+id/icon5"
-            android:layout_width="wrap_content"
+            android:layout_width="25dp"
             android:layout_height="25dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:contentDescription="@null"
-            android:src="@drawable/icono_ver_contrase_a"
-            android:scaleType="fitCenter"/>
+            android:scaleType="fitCenter"
+            android:src="@drawable/icono_ver_contrase_a" />
 
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/iconoContraseña3"
-        android:layout_width="355dp"
+        android:layout_width="320dp"
         android:layout_height="59dp"
         android:background="@drawable/icono_input_background"
         android:gravity="center_vertical"
@@ -273,7 +231,7 @@
 
         <EditText
             android:id="@+id/InputConfirmPassword"
-            android:layout_width="252dp"
+            android:layout_width="230dp"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
             android:paddingStart="3dp"

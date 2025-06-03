@@ -5,6 +5,9 @@
         <item>@font/anton</item>
         <item>@font/aoboshi_one</item>
         <item>@font/arapey</item>
+        <item>@font/roboto</item>
+        <item>@font/roboto_condensed_light</item>
+        <item>@font/roboto_light</item>
         <item>@font/roboto_mono_medium</item>
         <item>@font/roboto_mono_thin</item>
     </array>

@@ -24,7 +24,7 @@ class loginactivity : AppCompatActivity() {
 
         val inputPassword = findViewById<EditText>(R.id.editTextText2)
         val buttonTogglePassword = findViewById<ImageButton>(R.id.icon3)
-        val linkGoHome = findViewById<ImageButton>(R.id.btn_atras)
+        val linkGoHome = findViewById<Button>(R.id.btn_atras)
 
         // Link que redirije al usuario a la pantalla de RegisterActivity
         var LinkGoRegister = findViewById<TextView>(R.id.registerText)

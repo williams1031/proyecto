@@ -8,41 +8,27 @@
     android:background="@color/black"
     tools:context=".registrateactivity">
 
-    <LinearLayout
-        android:id="@+id/btn_atras"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:padding="6dp"
-        android:clickable="true"
-        android:focusable="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.104"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.06">
-
-        <ImageView
-            android:id="@+id/flecha"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:contentDescription="@null"
-            android:src="@drawable/flecha"/>
+    <androidx.appcompat.widget.AppCompatButton
+    android:id="@+id/btn_atras"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:drawableStart="@drawable/flecha2"
+    android:drawablePadding="8dp"
+    android:text="@string/Atras"
+    android:textAllCaps="false"
+    android:padding="12dp"
+    android:textSize="29sp"
+    android:background="?attr/selectableItemBackgroundBorderless"
+    android:textColor="@color/verde"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.05"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.04"/>
 
 
-        <TextView
-            android:id="@+id/backText"
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
-            android:text="@string/Atras"
-            android:textColor="#00FF00"
-            android:textSize="25sp"
-            android:paddingStart="10dp"/>
-    </LinearLayout>
-
-    <TextView
+    <Button
         android:id="@+id/text_iniciar_sesion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -50,12 +36,13 @@
         android:text="@string/iniciaS"
         android:textColor="@color/verde"
         android:textSize="20sp"
+        android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.724"
+        app:layout_constraintHorizontal_bias="0.79"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.92" />
+        app:layout_constraintVertical_bias="0.934" />
 
     <TextView
         android:id="@+id/registerPromptText3"
@@ -118,42 +105,27 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.315" />
 
-    <LinearLayout
-        android:id="@+id/btnGoogle"
-        android:layout_width="230dp"
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/ButtonRegister"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
         android:background="@drawable/button_repetir_reto"
-        android:clickable="true"
-        android:focusable="true"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:padding="10dp"
+        android:fontFamily="@font/roboto"
+        android:paddingStart="30dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="30dp"
+        android:paddingBottom="8dp"
+        android:text="@string/btn_registrate"
+        android:textAllCaps="false"
+        android:textColor="#00FF00"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.846">
-
-        <TextView
-            android:id="@+id/subtitleText2"
-            android:layout_width="183dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:fontFamily="@font/roboto"
-            android:text="@string/btn_registrate"
-            android:textAlignment="center"
-            android:textColor="@color/verde"
-            android:textSize="30sp"
-            android:paddingStart="28dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.491"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.315" />
-    </LinearLayout>
+        app:layout_constraintVertical_bias="0.853" />
 
     <LinearLayout
         android:id="@+id/iconoCorreo"
@@ -177,13 +149,13 @@
             android:src="@drawable/icono_correo"/>
 
         <EditText
-            android:id="@+id/editTextText"
+            android:id="@+id/InputEmail"
             android:layout_width="252dp"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
             android:paddingStart="3dp"
             android:ems="20"
-            android:inputType="text"
+            android:inputType="textEmailAddress"
             android:textColor="@color/black"
             android:hint="@string/ejemplo_correo"
             android:textColorHint="@color/grey"/>
@@ -254,7 +226,7 @@
             android:src="@drawable/icono_contrase_a"/>
 
         <EditText
-            android:id="@+id/editTextText3"
+            android:id="@+id/InputPassword"
             android:layout_width="252dp"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
@@ -262,15 +234,19 @@
             android:ems="15"
             android:inputType="textPassword"
             android:textColor="@color/black"
-            android:hint="@string/ejemplo_contraseña2"
+            android:hint="@string/ejemplo_contraseña"
+            android:autofillHints="Nuevacontraseña"
             android:textColorHint="@color/grey"/>
 
-        <ImageView
+        <ImageButton
             android:id="@+id/icon5"
             android:layout_width="wrap_content"
             android:layout_height="25dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
             android:contentDescription="@null"
-            android:src="@drawable/icono_ver_contrase_a"/>
+            android:src="@drawable/icono_ver_contrase_a"
+            android:scaleType="fitCenter"/>
+
     </LinearLayout>
 
     <LinearLayout
@@ -296,7 +272,7 @@
             android:src="@drawable/icono_contrase_a"/>
 
         <EditText
-            android:id="@+id/editTextText4"
+            android:id="@+id/InputConfirmPassword"
             android:layout_width="252dp"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
@@ -305,14 +281,17 @@
             android:inputType="textPassword"
             android:textColor="@color/black"
             android:hint="@string/ejemplo_contraseña"
+            android:autofillHints="Nuenacontraseña"
             android:textColorHint="@color/grey"/>
 
-        <ImageView
+        <ImageButton
             android:id="@+id/icon7"
             android:layout_width="wrap_content"
             android:layout_height="25dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
             android:contentDescription="@null"
-            android:src="@drawable/icono_no_ver_contrase_a"/>
+            android:src="@drawable/icono_ver_contrase_a"
+            android:scaleType="fitCenter"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

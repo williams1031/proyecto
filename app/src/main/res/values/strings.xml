@@ -42,7 +42,6 @@
     <string name="ejemplo_correo">Ejemplo@gmail.com</string>
     <string name="ejemplo_contraseña">********</string>
     <string name="ejemplo_contraseña2">contraseña</string>
-
-
+    <string name="nueva_contraseña">Nueva contraseña</string>
 
 </resources>

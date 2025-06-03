@@ -50,40 +50,24 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.66" />
 
-    <LinearLayout
-        android:id="@+id/btnGoogle"
-        android:layout_width="250dp"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/ButtonRegister"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
         android:background="@drawable/button_repetir_reto"
-        android:clickable="true"
-        android:focusable="true"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:padding="10dp"
+        android:fontFamily="@font/roboto"
+        android:paddingStart="30dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="30dp"
+        android:paddingBottom="8dp"
+        android:text="@string/btn_reintentar"
+        android:textAllCaps="false"
+        android:textColor="#00FF00"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.846">
-
-        <TextView
-            android:id="@+id/subtitleText2"
-            android:layout_width="225dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:fontFamily="@font/roboto"
-            android:paddingStart="10dp"
-            android:text="@string/btn_reintentar"
-            android:textAlignment="center"
-            android:textColor="@color/verde"
-            android:textSize="30sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.496"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.881" />
-    </LinearLayout>
+        app:layout_constraintVertical_bias="0.853" />
 </androidx.constraintlayout.widget.ConstraintLayout>

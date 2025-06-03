@@ -15,39 +15,24 @@
     <!-- Subtítulo -->
 
 
-    <LinearLayout
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_atras"
-        android:layout_width="150dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:padding="6dp"
-        android:clickable="true"
-        android:focusable="true"
+        android:drawableStart="@drawable/flecha2"
+        android:drawablePadding="8dp"
+        android:text="@string/Atras"
+        android:textAllCaps="false"
+        android:padding="12dp"
+        android:textSize="29sp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:textColor="@color/verde"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.104"
+        app:layout_constraintHorizontal_bias="0.05"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.06">
-
-        <ImageView
-            android:id="@+id/flecha"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:contentDescription="@null"
-            android:src="@drawable/flecha"/>
-
-
-        <TextView
-            android:id="@+id/backText"
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
-            android:text="@string/Atras"
-            android:textColor="#00FF00"
-            android:textSize="25sp"
-            android:paddingStart="10dp"/>
-    </LinearLayout>
+        app:layout_constraintVertical_bias="0.04"/>
 
     <TextView
         android:id="@+id/titleText"
@@ -79,7 +64,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.315" />
 
-    <TextView
+    <Button
         android:id="@+id/forgotPasswordText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -87,6 +72,7 @@
         android:text="@string/olvcontra"
         android:textColor="#00FF00"
         android:textSize="16sp"
+        android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.165"
@@ -130,7 +116,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.813" />
 
-    <TextView
+    <Button
         android:id="@+id/registerText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -138,12 +124,13 @@
         android:text="@string/registrate"
         android:textColor="#00FF00"
         android:textSize="16sp"
+        android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.714"
+        app:layout_constraintHorizontal_bias="0.76"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.813" />
+        app:layout_constraintVertical_bias="0.825" />
 
     <LinearLayout
         android:id="@+id/iconoCorreo"
@@ -173,9 +160,10 @@
             android:background="@android:color/transparent"
             android:paddingStart="3dp"
             android:ems="20"
-            android:inputType="text"
+            android:inputType="textEmailAddress"
             android:textColor="@color/black"
             android:hint="@string/ejemplo_correo"
+            android:autofillHints="NuevaContraseña"
             android:textColorHint="@color/grey"/>
     </LinearLayout>
 
@@ -213,11 +201,13 @@
             android:hint="@string/ejemplo_contraseña"
             android:textColorHint="@color/grey"/>
 
-        <ImageView
+        <ImageButton
             android:id="@+id/icon3"
             android:layout_width="wrap_content"
             android:layout_height="25dp"
             android:contentDescription="@null"
-            android:src="@drawable/icono_no_ver_contrase_a"/>
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/icono_ver_contrase_a"
+            android:scaleType="fitCenter"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

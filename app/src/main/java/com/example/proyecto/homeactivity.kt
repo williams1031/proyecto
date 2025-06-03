@@ -16,12 +16,12 @@ class homeactivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_home)
 
-        var AccederButton = findViewById<Button>(R.id.AccederButton)
+        var AccederButton = findViewById<Button>(R.id.loginButton)
         AccederButton.setOnClickListener {
             val intent = Intent(this, loginactivity::class.java)
             startActivity(intent)
         }
-        var RegisterText = findViewById<TextView>(R.id.RegisterButton)
+        val RegisterText = findViewById<TextView>(R.id.btnregistrarse)
         RegisterText.setOnClickListener {
             val intent = Intent(this, registrateactivity::class.java)
             startActivity(intent)
@@ -31,8 +31,6 @@ class homeactivity : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
-
-
         }
     }
 

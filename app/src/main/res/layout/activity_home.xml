@@ -31,13 +31,16 @@
 
     <Button
         android:id="@+id/loginButton"
-        android:layout_width="210dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
         android:layout_marginEnd="64dp"
         android:backgroundTint="#00FF00"
         android:fontFamily="@font/roboto"
-        android:padding="10dp"
+        android:paddingStart="35dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="35dp"
+        android:paddingBottom="8dp"
         android:text="@string/Acceder"
         android:textColor="#000000"
         android:textSize="30sp"
@@ -45,47 +48,66 @@
         app:cornerRadius="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.55"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.74" />
 
-    <LinearLayout
-        android:id="@+id/btnGoogle"
-        android:layout_width="260dp"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnregistrarse"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
         android:background="@drawable/button_repetir_reto"
-        android:clickable="true"
-        android:focusable="true"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:padding="10dp"
+        android:fontFamily="@font/roboto"
+        android:paddingStart="45dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="45dp"
+        android:paddingBottom="8dp"
+        android:text="@string/btn_registrate"
+        android:textAllCaps="false"
+        android:textColor="#00FF00"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.846">
+        app:layout_constraintVertical_bias="0.848" />
 
-        <TextView
-            android:id="@+id/subtitleText2"
-            android:layout_width="210dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:fontFamily="@font/roboto"
-            android:text="@string/btn_registrate"
-            android:textAlignment="center"
-            android:textColor="@color/verde"
-            android:textSize="30sp"
-            android:paddingStart="30dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.491"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.315" />
-    </LinearLayout>
+    <!--    <LinearLayout-->
+<!--        android:id="@+id/btnregistrarse"-->
+<!--        android:layout_width="260dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="40dp"-->
+<!--        android:background="@drawable/button_repetir_reto"-->
+<!--        android:clickable="true"-->
+<!--        android:focusable="true"-->
+<!--        android:gravity="center_vertical"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:padding="10dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.497"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.846">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/subtitleText2"-->
+<!--            android:layout_width="210dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:fontFamily="@font/roboto"-->
+<!--            android:text="@string/btn_registrate"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textColor="@color/verde"-->
+<!--            android:textSize="30sp"-->
+<!--            android:paddingStart="30dp"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.491"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintVertical_bias="0.315" />-->
+<!--    </LinearLayout>-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

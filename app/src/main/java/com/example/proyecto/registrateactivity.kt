@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -15,6 +16,7 @@ import com.google.firebase.auth.FirebaseAuth
 class registrateactivity : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
+    private var isPasswordVisible = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,6 +30,10 @@ class registrateactivity : AppCompatActivity() {
         val inputConfirmPassword = findViewById<EditText>(R.id.InputConfirmPassword)
         val buttonSubmit = findViewById<Button>(R.id.ButtonRegister)
         val linkGoLogin = findViewById<TextView>(R.id.text_iniciar_sesion)
+        val linkGoHome = findViewById<TextView>(R.id.btn_atras)
+        val buttonTogglePassword = findViewById<ImageButton>(R.id.icon5)
+        val buttonToggleConfirmPassword = findViewById<ImageButton>(R.id.icon7)
+
 
         buttonSubmit.setOnClickListener {
             val email = inputEmail.text.toString().trim()
@@ -65,6 +71,50 @@ class registrateactivity : AppCompatActivity() {
         linkGoLogin.setOnClickListener {
             val intent = Intent(this, loginactivity::class.java)
             startActivity(intent)
+        }
+
+        // Ir al home
+        linkGoHome.setOnClickListener {
+            val intent = Intent(this, homeactivity::class.java)
+            startActivity(intent)
+        }
+
+
+
+        // Toggle para mostrar/ocultar contraseña
+        buttonTogglePassword.setOnClickListener {
+            if (isPasswordVisible) {
+                // Ocultar contraseña
+                inputPassword.inputType = android.text.InputType.TYPE_CLASS_TEXT or
+                        android.text.InputType.TYPE_TEXT_VARIATION_PASSWORD
+                buttonTogglePassword.setImageResource(R.drawable.icono_no_ver_contrase_a) // Cambia al icono de ocultar
+            } else {
+                // Mostrar contraseña
+                inputPassword.inputType = android.text.InputType.TYPE_CLASS_TEXT or
+                        android.text.InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
+                buttonTogglePassword.setImageResource(R.drawable.icono_ver_contrase_a) // Cambia al icono de mostrar
+            }
+            // Mantener el cursor al final
+            inputPassword.setSelection(inputPassword.text.length)
+            isPasswordVisible = !isPasswordVisible
+        }
+
+        // Toggle para mostrar/ocultar contraseña
+        buttonToggleConfirmPassword.setOnClickListener {
+            if (isPasswordVisible) {
+                // Ocultar contraseña
+                inputConfirmPassword.inputType = android.text.InputType.TYPE_CLASS_TEXT or
+                        android.text.InputType.TYPE_TEXT_VARIATION_PASSWORD
+                buttonToggleConfirmPassword.setImageResource(R.drawable.icono_no_ver_contrase_a) // Cambia al icono de ocultar
+            } else {
+                // Mostrar contraseña
+                inputConfirmPassword.inputType = android.text.InputType.TYPE_CLASS_TEXT or
+                        android.text.InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
+                buttonToggleConfirmPassword.setImageResource(R.drawable.icono_ver_contrase_a) // Cambia al icono de mostrar
+            }
+            // Mantener el cursor al final
+            inputConfirmPassword.setSelection(inputConfirmPassword.text.length)
+            isPasswordVisible = !isPasswordVisible
         }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->

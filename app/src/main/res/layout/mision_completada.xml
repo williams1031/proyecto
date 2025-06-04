@@ -77,14 +77,15 @@
     <!-- Botón de completar -->
     <Button
         android:id="@+id/buttonComplete"
-        android:layout_width="0dp"
+        android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:text="@string/btn_valido"
-        android:backgroundTint="#003300"
+        android:backgroundTint="@color/verde_mas_oscuro"
         android:textColor="@color/verde_claro"
         android:fontFamily="monospace"
         android:textStyle="bold"
         android:layout_marginTop="20dp"
+        app:cornerRadius="12dp"
         app:layout_constraintTop_toBottomOf="@id/statusText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

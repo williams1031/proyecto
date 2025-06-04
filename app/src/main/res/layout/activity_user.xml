@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="@color/negro_claro"
+    tools:context=".Activity_User">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@color/negro"
+        android:elevation="6dp"
+        android:layout_margin="8dp"
+        android:clipToPadding="false"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/negro_claro">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="237dp"
+            app:srcCompat="@drawable/logo" />
+
+        <EditText
+            android:id="@+id/inputNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="🧑 Nombre completo"
+            android:inputType="textPersonName"
+            android:textColor="@color/white"
+            android:textColorHint="@color/grey"
+            android:background="@drawable/bg_input_terminal"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp" />
+
+        <EditText
+            android:id="@+id/inputUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="💻 Nombre de usuario"
+            android:inputType="text"
+            android:textColor="@color/white"
+            android:textColorHint="@color/grey"
+            android:background="@drawable/bg_input_terminal"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp" />
+
+        <EditText
+            android:id="@+id/inputEdad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="🎂 Edad"
+            android:inputType="number"
+            android:textColor="@color/white"
+            android:textColorHint="@color/grey"
+            android:background="@drawable/bg_input_terminal"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp" />
+
+        <EditText
+            android:id="@+id/EmailUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="📧 Correo electrónico"
+            android:inputType="textEmailAddress"
+            android:enabled="false"
+            android:textColor="@color/grey"
+            android:textColorHint="@color/grey"
+            android:background="@drawable/bg_input_terminal"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp" />
+
+        <EditText
+            android:id="@+id/inputRol"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="🎯 Rol favorito (Ej: Cracker, Phisher)"
+            android:inputType="text"
+            android:textColor="@color/white"
+            android:textColorHint="@color/grey"
+            android:background="@drawable/bg_input_terminal"
+            android:padding="12dp"
+            android:layout_marginBottom="24dp" />
+
+        <Button
+            android:id="@+id/btnGuardarPerfil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💾 Guardar perfil"
+            android:backgroundTint="@color/verde"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:padding="14dp"
+            android:layout_marginTop="8dp"
+            android:elevation="4dp" />
+
+    </LinearLayout>
+</ScrollView>

@@ -57,7 +57,7 @@ class registrateactivity : AppCompatActivity() {
                     if (task.isSuccessful) {
                         Toast.makeText(this, "Registro exitoso", Toast.LENGTH_SHORT).show()
                         // Opcional: ir al login o a la pantalla principal
-                        val intent = Intent(this, alertaactivity::class.java)
+                        val intent = Intent(this, Activity_User::class.java)
                         startActivity(intent)
                         finish()
                     } else {

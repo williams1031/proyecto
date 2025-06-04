@@ -30,8 +30,8 @@
 
     <TextView
         android:id="@+id/titleText2"
-        android:layout_width="158dp"
-        android:layout_height="114dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:fontFamily="@font/anton"
         android:text="@string/alerta"
         android:textAlignment="center"
@@ -39,7 +39,6 @@
         android:textSize="48sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.191" />
@@ -47,7 +46,7 @@
     <TextView
         android:id="@+id/textView2"
         android:layout_width="314dp"
-        android:layout_height="226dp"
+        android:layout_height="wrap_content"
         android:fontFamily="@font/arapey"
         android:text="@string/texto4"
         android:textColor="@color/verde"
@@ -72,8 +71,8 @@
 
     <TextView
         android:id="@+id/subtitleText3"
-        android:layout_width="330dp"
-        android:layout_height="126dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
         android:fontFamily="@font/arapey"
         android:text="@string/texto5"
         android:textAlignment="center"

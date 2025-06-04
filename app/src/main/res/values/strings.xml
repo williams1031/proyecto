@@ -20,7 +20,7 @@
     <string name="iniciaS">inicia sesión</string>
     <string name="alerta">ALERTA</string>
     <string name="texto4">Tu identidad ha sido comprometida. Un grupo de hackers ha tomado control de tus datos.</string>
-    <string name="texto5">Recuepera el control superando desasfios digitales.</string>
+    <string name="texto5">Recupera el control superando desafíos digitales.</string>
     <string name="comenzar">Comenzar misión</string>
     <string name="cronometro">3:00</string>
     <string name="nivel1">NIVEL 1</string>
@@ -43,5 +43,18 @@
     <string name="ejemplo_contraseña">********</string>
     <string name="ejemplo_contraseña2">contraseña</string>
     <string name="nueva_contraseña">Nueva contraseña</string>
+    <string name="mision_fallida">MISIÓN FALLIDA</string>
+    <string name="msg_alerta">Tiempo expirado. El sistema de seguridad detectó tus actividades y finalizó tu conexión. Inténtalo de nuevo para completar la misión.</string>
+    <string name="btn_intenatalo_nuevo">Inténtalo de nuevo</string>
+    <string name="btn_inicio">Inicio</string>
+    <string name="msg_mision">MISIÓN COMPLEATADA</string>
+    <string name="msg_nivel1">Nivel 1 completado</string>
+    <string name="msg_diagnostico">Estado del sistema: Ejecutando diagnósticos...</string>
+    <string name="btn_valido"> ✔ Sistema validado exitosamente </string>
+
+
+
+
+
 
 </resources>

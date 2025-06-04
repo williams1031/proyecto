@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/black">
+    android:background="@android:color/black"
+    android:id="@+id/main">
 
     <TextView
         android:id="@+id/timerTextView"
@@ -51,35 +52,36 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.431" />
+        app:layout_constraintVertical_bias="0.4" />
 
     <TextView
         android:id="@+id/passwordPrompt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:text="@string/contraseña_segura"
         android:textColor="@color/verde"
         android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/levelTextView" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.46"/>
 
     <EditText
         android:id="@+id/passwordInput"
-        android:layout_width="350dp"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:background="@drawable/input_background"
-        android:hint="@string/contraseña_nivel"
         android:padding="12dp"
         android:paddingStart="25dp"
-        android:textColorHint="#000000"
+        android:textColor="@color/black"
+        android:hint="@string/contraseña_nivel"
+        android:textColorHint="@color/grey"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.683" />
+        app:layout_constraintVertical_bias="0.61" />
 
     <TextView
         android:id="@+id/descriptionText"
@@ -95,22 +97,24 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.586" />
+        app:layout_constraintVertical_bias="0.52" />
 
-    <TextView
-        android:id="@+id/securityValidationLabel"
+    <EditText
+        android:id="@+id/feedbackText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/arapey"
         android:text="@string/validando_seguridad"
         android:textColor="@color/verde"
         android:textSize="25dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.208"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.748" />
+        app:layout_constraintVertical_bias="0.68" />
 
     <CheckBox
         android:id="@+id/checkUppercase"
@@ -123,20 +127,7 @@
         app:layout_constraintHorizontal_bias="0.129"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.83" />
-
-    <CheckBox
-        android:id="@+id/checkNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/numero"
-        android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.121"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.91" />
+        app:layout_constraintVertical_bias="0.765" />
 
     <CheckBox
         android:id="@+id/checkSymbol"
@@ -149,7 +140,7 @@
         app:layout_constraintHorizontal_bias="0.122"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.95" />
+        app:layout_constraintVertical_bias="0.885" />
 
     <CheckBox
         android:id="@+id/checkLength"
@@ -162,7 +153,7 @@
         app:layout_constraintHorizontal_bias="0.162"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.991" />
+        app:layout_constraintVertical_bias="0.926" />
 
     <CheckBox
         android:id="@+id/checkLowercase"
@@ -175,6 +166,19 @@
         app:layout_constraintHorizontal_bias="0.127"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.87" />
+        app:layout_constraintVertical_bias="0.806" />
+
+    <CheckBox
+        android:id="@+id/checkNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/numero"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.121"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.846" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -110,8 +110,9 @@ class actity_nivel1 : AppCompatActivity() {
         val hasUppercase = password.any { it.isUpperCase() }
         val hasLowercase = password.any { it.isLowerCase() }
         val hasNumber = password.any { it.isDigit() }
-        val hasSymbol = password.any { !it.isLetterOrDigit() }
-        val hasLength = password.length >= 8
+        // Cambiar la verificación de símbolos para que no cuente espacios
+        val hasSymbol = trimmedPassword.any { !it.isLetterOrDigit() && it != ' ' }
+        val hasLength = trimmedPassword.length >= 8
 
         checkUppercase.isChecked = hasUppercase
         checkLowercase.isChecked = hasLowercase

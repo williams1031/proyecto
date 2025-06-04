@@ -8,7 +8,7 @@
     <string name="Acceder">Acceder</string>
     <string name="registrarse">REGISTRARSE</string>
     <string name="iniciarsesion">INICIAR SESIÓN</string>
-    <string name="texto2">Inicie sesión para continuar con nuetra aplicación</string>
+    <string name="texto2">Inicie sesión para continuar con nuestra aplicación</string>
     <string name="olvcontra">¿Olvidaste la contraseña?</string>
     <string name="nocuenta">¿No tienes cuenta?</string>
     <string name="registrate">Registrate</string>
@@ -22,7 +22,7 @@
     <string name="texto4">Tu identidad ha sido comprometida. Un grupo de hackers ha tomado control de tus datos.</string>
     <string name="texto5">Recupera el control superando desafíos digitales.</string>
     <string name="comenzar">Comenzar misión</string>
-    <string name="cronometro">3:00</string>
+    <string name="cronometro">2:00</string>
     <string name="nivel1">NIVEL 1</string>
     <string name="contraseña_segura">CONTRASEÑA SEGURA</string>
     <string name="txt_contraseña">Crear una contraseña segura para pasar al siguiente nivel</string>

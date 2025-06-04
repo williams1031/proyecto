@@ -105,6 +105,8 @@ class actity_nivel1 : AppCompatActivity() {
     }
 
     private fun validatePassword(password: String) {
+        // Eliminar espacios en blanco
+        val trimmedPassword = password.replace(" ", "")
         val hasUppercase = password.any { it.isUpperCase() }
         val hasLowercase = password.any { it.isLowerCase() }
         val hasNumber = password.any { it.isDigit() }

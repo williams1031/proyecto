@@ -6,9 +6,9 @@
     <color name="negro_claro">#1A1A1A</color>
     <color name="grey">#7D848D</color>
     <color name="verde">#00ff00</color>
+    <color name="verde_claro">#00FF66</color>
     <color name="verde_oscuro">#006400</color>
+    <color name="verde_mas_oscuro">#003300</color>
 
-
-
-
+    <color name="rojo">#FF0000</color>
 </resources>

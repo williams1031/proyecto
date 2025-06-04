@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Fondo negro -->
+    <solid android:color="@color/negro_claro" />
+
+    <!-- Borde verde hacker -->
+    <stroke
+        android:width="2dp"
+        android:color="@color/rojo"/>
+
+    <!-- Bordes redondeados -->
+    <corners android:radius="10dp"/>
+</shape>

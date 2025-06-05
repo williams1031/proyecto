@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/black"
+    android:padding="0dp">
+
+    <TextView
+        android:id="@+id/tvNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="monospace"
+        android:text="> Cargando nombre..."
+        android:textSize="10sp"
+        android:textColor="@color/verde"
+        android:textIsSelectable="true"
+        android:padding="2dp"
+        android:background="@color/black" />
+
+    <TextView
+        android:id="@+id/tvRol"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:fontFamily="monospace"
+        android:text="> Cargando rol..."
+        android:textSize="10sp"
+        android:textColor="@color/verde"
+        android:textIsSelectable="true"
+        android:padding="2dp"
+        android:background="@color/black" />
+
+</LinearLayout>

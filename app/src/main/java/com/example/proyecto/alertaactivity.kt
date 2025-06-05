@@ -18,6 +18,7 @@ import androidx.core.view.WindowInsetsCompat
 class alertaactivity : AppCompatActivity() {
 
     private lateinit var titleText2: TextView
+    private lateinit var titleText3: TextView
     private lateinit var textView2: TextView
     private lateinit var subtitleText3: TextView
     private lateinit var buttonSubmit: Button
@@ -28,6 +29,7 @@ class alertaactivity : AppCompatActivity() {
         setContentView(R.layout.activity_alerta)
 
         titleText2 = findViewById(R.id.titleText2)
+        titleText3 = findViewById(R.id.titleText3)
         textView2 = findViewById(R.id.textView2)
         subtitleText3 = findViewById(R.id.subtitleText3)
         buttonSubmit = findViewById(R.id.loginButton2)
@@ -35,6 +37,7 @@ class alertaactivity : AppCompatActivity() {
         // Inicializar textos vacíos
         textView2.text = ""
         subtitleText3.text = ""
+        titleText3.text = ""
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -83,10 +86,12 @@ class alertaactivity : AppCompatActivity() {
 
     private fun startTypingSequence() {
         typeText(textView2, getString(R.string.texto4)) {
-            typeText(subtitleText3, getString(R.string.texto5)) {
-                // Una vez que se completa la escritura, animar el botón
-                val buttonSubmit = findViewById<Button>(R.id.loginButton2)
-                animateButton(buttonSubmit)
+             typeText(titleText3, getString(R.string.tu_mision)) {
+                typeText(subtitleText3, getString(R.string.texto5)) {
+                    // Una vez que se completa la escritura, animar el botón
+                    val buttonSubmit = findViewById<Button>(R.id.loginButton2)
+                    animateButton(buttonSubmit)
+                }
             }
         }
     }

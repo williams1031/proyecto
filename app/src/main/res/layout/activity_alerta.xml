@@ -35,7 +35,7 @@
         android:fontFamily="@font/anton"
         android:text="@string/alerta"
         android:textAlignment="center"
-        android:textColor="@color/design_default_color_error"
+        android:textColor="@color/rojo_oscuro"
         android:textSize="48sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -50,13 +50,12 @@
         android:fontFamily="@font/arapey"
         android:text="@string/texto4"
         android:textColor="@color/verde"
-        android:textSize="34sp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.421" />
+        app:layout_constraintVertical_bias="0.35" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -70,17 +69,31 @@
         app:srcCompat="@drawable/icono_alerta" />
 
     <TextView
+        android:id="@+id/titleText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/anton"
+        android:text="@string/tu_mision"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="38sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.53" />
+
+    <TextView
         android:id="@+id/subtitleText3"
-        android:layout_width="300dp"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/arapey"
         android:text="@string/texto5"
         android:textAlignment="center"
         android:textColor="@color/verde"
-        android:textSize="34sp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.694" />

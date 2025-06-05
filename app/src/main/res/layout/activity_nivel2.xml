@@ -87,14 +87,68 @@
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="398dp"
-        android:layout_height="259dp"
+        android:layout_width="370dp"
+        android:layout_height="215dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.985"
+        app:layout_constraintVertical_bias="0.94"
         app:srcCompat="@drawable/img_phishing" />
+
+    <View
+        android:id="@+id/hotspotSender"
+        android:layout_width="242dp"
+        android:layout_height="20dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.278"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.68" />
+
+    <View
+        android:id="@+id/hotspotSubject"
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="90dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.21"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.708" />
+
+    <View
+        android:id="@+id/hotspotButtom"
+        android:layout_width="60dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="270dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.183"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.775" />
+
+    <View
+        android:id="@+id/hotspotLink"
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="270dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.26"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.85" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

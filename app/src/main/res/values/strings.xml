@@ -53,6 +53,7 @@
     <string name="msg_diagnostico">Estado del sistema: Ejecutando diagnósticos...</string>
     <string name="btn_valido"> ✔ Sistema validado exitosamente </string>
     <string name="msg_nivel2">Nivel 2 completado</string>
+    <string name="logout">Cerrar Sesión</string>
 
 
 </resources>

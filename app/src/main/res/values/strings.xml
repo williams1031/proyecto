@@ -20,6 +20,7 @@
     <string name="iniciaS">inicia sesión</string>
     <string name="alerta">ALERTA</string>
     <string name="texto4">Tu identidad ha sido comprometida. Un grupo de hackers ha tomado control de tus datos.</string>
+    <string name="tu_mision">Tu misión :</string>
     <string name="texto5">Recupera el control superando desafíos digitales.</string>
     <string name="comenzar">Comenzar misión</string>
     <string name="cronometro">2:00</string>
@@ -51,6 +52,7 @@
     <string name="msg_nivel1">Nivel 1 completado</string>
     <string name="msg_diagnostico">Estado del sistema: Ejecutando diagnósticos...</string>
     <string name="btn_valido"> ✔ Sistema validado exitosamente </string>
+    <string name="msg_nivel2">Nivel 2 completado</string>
 
 
 </resources>

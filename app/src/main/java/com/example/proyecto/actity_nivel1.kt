@@ -205,4 +205,11 @@ class actity_nivel1 : AppCompatActivity() {
             }
         }, 40)
     }
+    override fun onDestroy() {
+        super.onDestroy()
+        if (::countDownTimer.isInitialized) {
+            countDownTimer.cancel()
+        }
+        super.onBackPressed()
+    }
 }

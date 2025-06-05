@@ -12,14 +12,11 @@ import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.google.android.material.color.utilities.Score
-
-
 
 class activity_nivel2 : AppCompatActivity() {
 
     private lateinit var timerTextView: TextView
-    private var countDownTimer: CountDownTimer? = null
+    private lateinit var countDownTimer: CountDownTimer
     private val totalTime: Long = 120000 // 2 minutos en milisegundos
     private val interval: Long = 1000 // 1 segundo en milisegundos
     private var score: Int = 0
@@ -46,14 +43,22 @@ class activity_nivel2 : AppCompatActivity() {
             }
             override fun onFinish() {
                 timerTextView.text = "00:00"
-                // Puedes agregar cualquier acción cuando termine el temporizador
+                showLevel2ResultDialog(success = false) // ✅ Mostrar diálogo de misión fallida
             }
         }.start()
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        countDownTimer?.cancel() // Cancelar el temporizador si la actividad se destruye
+        if (::countDownTimer.isInitialized) {
+            countDownTimer.cancel()
+        }
+    }
+
+
+    override fun onBackPressed() {
+        if (::countDownTimer.isInitialized) countDownTimer.cancel()
+        super.onBackPressed()
     }
 
     private fun setupHotspots() {
@@ -77,9 +82,11 @@ class activity_nivel2 : AppCompatActivity() {
             Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
 
             if (touchedHotspots.size == 4) {
-                showLevel2CompletedDialog()
+                countDownTimer.cancel()
+                showLevel2ResultDialog(success = true)
             }
         }
+
 
         hotspotSender.setOnClickListener {
             handleHotspotClick(R.id.hotspotSender, "📧 Remitente sospechoso detectado")
@@ -96,6 +103,7 @@ class activity_nivel2 : AppCompatActivity() {
         hotspotLink.setOnClickListener {
             handleHotspotClick(R.id.hotspotLink, "🔗 Link sospechoso detectado")
         }
+
     }
 
     private fun validateHotspot(isCorrect: Boolean) {
@@ -107,8 +115,9 @@ class activity_nivel2 : AppCompatActivity() {
         }
     }
 
-    private fun showLevel2CompletedDialog() {
-        val dialogView = layoutInflater.inflate(R.layout.mision_completada2, null)
+    private fun showLevel2ResultDialog(success: Boolean) {
+        val layoutId = if (success) R.layout.mision_completada2 else R.layout.mision_fallida
+        val dialogView = layoutInflater.inflate(layoutId, null)
         val dialog = AlertDialog.Builder(this)
             .setView(dialogView)
             .setCancelable(false)
@@ -117,35 +126,44 @@ class activity_nivel2 : AppCompatActivity() {
         dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
         dialog.show()
 
-        val progressBar = dialogView.findViewById<ProgressBar>(R.id.progressBar)
-        val statusText = dialogView.findViewById<TextView>(R.id.statusText)
-        val completeButton = dialogView.findViewById<Button>(R.id.buttonComplete)
+        if (success) {
+            val progressBar = dialogView.findViewById<ProgressBar>(R.id.progressBar)
+            val statusText = dialogView.findViewById<TextView>(R.id.statusText)
 
-        // Animar el progreso con Handler
-        val handler = Handler(Looper.getMainLooper())
-        var progress = 0
+            val handler = Handler(Looper.getMainLooper())
+            var progress = 0
 
-        handler.postDelayed(object : Runnable {
-            override fun run() {
-                if (progress < 100) {
-                    progress += 4
-                    progressBar.progress = progress
-                    handler.postDelayed(this, 40)
-                } else {
-                    // Una vez completado
-                    completeButton.text = "✔ NIVEL COMPLETADO"
-                    completeButton.isEnabled = true
-                    completeButton.alpha = 1.0f
-                    statusText.text = "✔ Todas las amenazas fueron detectadas con éxito"
-
-                    // Espera 2 segundos y lanza la siguiente activity
-                    handler.postDelayed({
-                        dialog.dismiss()
-                        startActivity(Intent(this@activity_nivel2, activity_final::class.java))
-                        finish()
-                    }, 5000)
+            handler.postDelayed(object : Runnable {
+                override fun run() {
+                    if (progress < 100) {
+                        progress += 5
+                        progressBar.progress = progress
+                        handler.postDelayed(this, 50)
+                    } else {
+                        statusText.text = "✔ Todas las amenazas fueron detectadas con éxito"
+                        handler.postDelayed({
+                            dialog.dismiss()
+                            startActivity(Intent(this@activity_nivel2, activity_final::class.java))
+                            finish()
+                        }, 5000)
+                    }
                 }
+            }, 50)
+
+        } else {
+            val retryButton = dialogView.findViewById<Button>(R.id.button_retry)
+            val homeButton = dialogView.findViewById<Button>(R.id.button_home)
+
+            retryButton.setOnClickListener {
+                dialog.dismiss()
+                recreate()
             }
-        }, 40)
+
+            homeButton.setOnClickListener {
+                dialog.dismiss()
+                finish()
+            }
+        }
     }
+
 }
